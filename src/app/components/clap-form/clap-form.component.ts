@@ -45,6 +45,7 @@ export class ClapformComponent {
   }
 
   protected htmlToClipboard(html: string, el?: HTMLDivElement): void {
+    window.getSelection().removeAllRanges();
     let tmpEl: HTMLDivElement;
     if (typeof el !== 'undefined') {
       tmpEl = el;
