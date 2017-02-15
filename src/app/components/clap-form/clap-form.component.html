@@ -1,0 +1,9 @@
+<div class="clap-container">
+  <h5>Enter text here:</h5>
+  <textarea ref-textarea [(ngModel)]="initialText" rows="4" (keyup)="onKey(textarea.value)"></textarea>
+  <h5>Here's your clappified text:</h5>
+  <textarea [(ngModel)]="clapText" rows="4" ></textarea>
+  <div class="button">
+    <a href="#" class="btn btn-primary" (click)="copyText($event)">{{clapEmoji}}Copy{{clapEmoji}}</a>
+  </div>
+</div>
