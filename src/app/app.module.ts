@@ -8,6 +8,7 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { ClapformComponent } from './components/clap-form/clap-form.component';
+import { ClapTextComponent } from './components/clap-text/clap-text.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { AppRoutingModule } from './routing/app-routing.module';
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './routing/app-routing.module';
   declarations: [
     AppComponent,
     ClapformComponent,
+    ClapTextComponent,
     NotFoundComponent,
   ],
   imports: [

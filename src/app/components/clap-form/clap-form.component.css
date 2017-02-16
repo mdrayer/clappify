@@ -9,13 +9,6 @@
   border-image: url("assets/img/claps-border.png") 33% round;
 }
 
-textarea {
-  width: 100%;
-  box-sizing: border-box;
-  font-family: "Lucida Console", Monaco, monospace;
-  resize: none;
-}
-
 .button {
   text-align: center;
 }

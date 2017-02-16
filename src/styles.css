@@ -12,6 +12,13 @@ body {
   cursor: url('assets/img/clap.png'), auto;
 }
 
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Lucida Console", Monaco, monospace;
+  resize: none;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
