@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { escapeHtml } from '../../util/escapeHtml';
+
 @Component({
   moduleId: module.id,
   selector: 'app-clap-form',
@@ -23,6 +25,9 @@ export class ClapformComponent {
 
   protected htmlToClipboard(html: string, el?: HTMLDivElement): void {
     window.getSelection().removeAllRanges();
+    // escape the string for safety concerns
+    html = escapeHtml(html);
+
     let tmpEl: HTMLDivElement;
     if (typeof el !== 'undefined') {
       tmpEl = el;
