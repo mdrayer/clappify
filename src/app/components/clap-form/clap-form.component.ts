@@ -7,26 +7,34 @@ import { Component } from '@angular/core';
   styleUrls: ['clap-form.component.css'],
 })
 export class ClapformComponent {
-  initialText: string;
+  inputText: string;
   clapText: string;
   clapEmoji: string;
+  uppercase: boolean;
 
   constructor() {
-    this.initialText = 'Hello, how are you doing today?';
+    this.inputText = 'Hello, how are you doing today?';
     this.clapEmoji = '👏';
-    this.clapText = this.clappify(this.initialText);
+    this.uppercase = false;
+    this.clappify();
   }
 
-  onKey(text: string): void {
-    this.clapText = this.clappify(text);
+  onKey(): void {
+    this.clappify();
   }
 
-  protected clappify(text: string): string {
+  protected clappify(): void {
     // send back empty string for empty text
-    if (text.length === 0) { return ''; }
+    if (this.inputText.length === 0) { this.clapText = ''; }
+
+    let clapText = this.inputText;
+
+    if (this.uppercase) {
+      clapText = clapText.toUpperCase();
+    }
 
     // remove all commas and periods
-    let clapText = text.replace(/[,.]/g, '');
+    clapText = clapText.replace(/[,.]/g, '');
 
     // insert space before question marks and exclamation marks
     clapText = clapText.replace(/\?/g, ' ?');
@@ -35,7 +43,7 @@ export class ClapformComponent {
     // replace white space with clap emoji
     clapText = this.clapEmoji + clapText.replace(/\s/g, this.clapEmoji) + this.clapEmoji;
 
-    return clapText;
+    this.clapText =  clapText;
   }
 
   protected copyText(event: Event): void {
@@ -69,5 +77,9 @@ export class ClapformComponent {
     document.execCommand('copy');
 
     document.body.removeChild(tmpEl);
+  }
+
+  protected uppercaseToggled(): void {
+    this.clappify();
   }
 }

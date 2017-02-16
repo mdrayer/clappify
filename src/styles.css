@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Imports */
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
 /* Space out content a bit */
 body {
   padding-top: 20px;

@@ -1,8 +1,16 @@
 <div class="clap-container">
   <h5>Enter text here:</h5>
-  <textarea ref-textarea [(ngModel)]="initialText" rows="4" (keyup)="onKey(textarea.value)"></textarea>
+  <textarea ref-textarea [(ngModel)]="inputText" rows="4" (keyup)="onKey(textarea.value)"></textarea>
   <h5>Here's your clappified text:</h5>
   <textarea [(ngModel)]="clapText" rows="4" ></textarea>
+  <div class="uppercase-toggle">
+    <h5>Trynna yell at someone?</h5>
+    <p>
+      <span class="toggle-label" [class.active]="!uppercase">Nope</span>
+      <md-slide-toggle (change)="uppercaseToggled()" [(ngModel)]="uppercase"></md-slide-toggle>
+      <span class="toggle-label" [class.active]="uppercase">YUP</span>
+    </p>
+  </div>
   <div class="button">
     <a href="#" class="btn btn-primary" (click)="copyText($event)">{{clapEmoji}}Copy{{clapEmoji}}</a>
   </div>
