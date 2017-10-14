@@ -3,10 +3,10 @@
   border-style: solid;
   border-width: 10px;
   padding: 10px;
-  -moz-border-image: url("assets/img/claps-border.png") 33% round;
-  -webkit-border-image: url("assets/img/claps-border.png") 33% round;
-  -o-border-image: url("assets/img/claps-border.png") 33% round;
-  border-image: url("assets/img/claps-border.png") 33% round;
+  -moz-border-image: url("../../../assets/img/claps-border.png") 33% round;
+  -webkit-border-image: url("../../../assets/img/claps-border.png") 33% round;
+  -o-border-image: url("../../../assets/img/claps-border.png") 33% round;
+  border-image: url("../../../assets/img/claps-border.png") 33% round;
 }
 
 .button {
