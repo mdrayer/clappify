@@ -17,7 +17,7 @@ export class ClapformComponent {
     this.uppercase = false;
   }
 
-  protected copyText(event: Event, text: string): void {
+  copyText(event: Event, text: string): void {
     event.preventDefault();
 
     this.htmlToClipboard(text);
